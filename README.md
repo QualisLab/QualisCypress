@@ -36,7 +36,9 @@ Install project dependencies with: npm i
 
 
 ## 🚀 Run the test: 
-Open the terminal and run: .\runTest.ps1
+Open the terminal and run: .\runTest.ps1 -enviroment qa
+
+>>>Enviroments options: qa - dev - prod
 
 ## 🚀 Run the demo: 
 Open the terminal and run: npm run cypress:execution
