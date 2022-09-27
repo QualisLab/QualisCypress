@@ -33,4 +33,6 @@ Open the terminal and run: npm run cypress:execution
 
 ## 🚀 Run the test: 
 Open the terminal and run: .\runTest.ps1
-(Oracle Instant Client must be installed in C:\   >>>   https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
+______________________________________________________________________________________
+Oracle Instant Client must be installed in C:\ 
+ https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html
