@@ -1,7 +1,8 @@
-param ($enviroment)
+param ($enviroment,$tags)
 Write-Host '***Start***' -ForegroundColor White -BackgroundColor DarkRed
 Write-Host 'La prueba se ejecutara con las siguientes especificaciones'
 Write-Host 'Ambiente: ' $enviroment
+Write-Host 'Tags: ' $tags
 try {
     Write-Host '--> Si existe, se eliminaran los archivos dentro de las carpetas cypress/videos'
     rm -r cypress/videos -ErrorAction stop
@@ -41,7 +42,7 @@ try {
     Write-Host "***" -ForegroundColor Magenta
     Write-Host "***" -ForegroundColor Magenta
     Write-Host '--> Corriendo las pruebas'
-    npx cypress run
+    npx cypress run --env tags=@$tags
     Write-Host "*" -ForegroundColor Magenta
     Write-Host "***" -ForegroundColor Magenta
     Write-Host "***" -ForegroundColor Magenta

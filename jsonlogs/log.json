@@ -13,86 +13,7 @@
             "line": 6,
             "name": "A user opens a saucelabs website",
             "result": {
-              "duration": 932000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "background"
-      },
-      {
-        "description": "",
-        "id": "login-page;success-login",
-        "keyword": "Scenario",
-        "line": 8,
-        "name": "Success Login",
-        "steps": [
-          {
-            "keyword": "When ",
-            "line": 9,
-            "name": "A user enters the username \"standard_user\"",
-            "result": {
-              "duration": 323000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "And ",
-            "line": 10,
-            "name": "A user enters the password \"secret_sauce\"",
-            "result": {
-              "duration": 286000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "And ",
-            "line": 11,
-            "name": "A user clicks on the login button",
-            "result": {
-              "duration": 92000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 12,
-            "name": "the url will contains the inventory subdirectory",
-            "result": {
-              "duration": 7000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "keyword": "Background",
-        "line": 5,
-        "name": "",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 6,
-            "name": "A user opens a saucelabs website",
-            "result": {
-              "duration": 347000000,
+              "duration": 402000000,
               "status": "passed"
             },
             "match": {
@@ -106,15 +27,15 @@
         "description": "",
         "id": "login-page;blocked-login",
         "keyword": "Scenario",
-        "line": 14,
+        "line": 16,
         "name": "Blocked Login",
         "steps": [
           {
             "keyword": "When ",
-            "line": 15,
+            "line": 17,
             "name": "A user enters the username \"locked_out_user\"",
             "result": {
-              "duration": 321000000,
+              "duration": 349000000,
               "status": "passed"
             },
             "match": {
@@ -123,10 +44,10 @@
           },
           {
             "keyword": "And ",
-            "line": 16,
+            "line": 18,
             "name": "A user enters the password \"secret_sauce\"",
             "result": {
-              "duration": 280000000,
+              "duration": 285000000,
               "status": "passed"
             },
             "match": {
@@ -135,10 +56,10 @@
           },
           {
             "keyword": "And ",
-            "line": 17,
+            "line": 19,
             "name": "A user clicks on the login button",
             "result": {
-              "duration": 84000000,
+              "duration": 87000000,
               "status": "passed"
             },
             "match": {
@@ -147,10 +68,10 @@
           },
           {
             "keyword": "Then ",
-            "line": 18,
+            "line": 20,
             "name": "The error message \"Epic sadface: Sorry, this user has been locked out.\" is displayed",
             "result": {
-              "duration": 8000000,
+              "duration": 10000000,
               "status": "passed"
             },
             "match": {
@@ -158,255 +79,13 @@
             }
           }
         ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "keyword": "Background",
-        "line": 5,
-        "name": "",
-        "steps": [
+        "type": "scenario",
+        "tags": [
           {
-            "keyword": "Given ",
-            "line": 6,
-            "name": "A user opens a saucelabs website",
-            "result": {
-              "duration": 64000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
+            "line": 15,
+            "name": "@prueba2"
           }
-        ],
-        "type": "background"
-      },
-      {
-        "description": "",
-        "id": "login-page;incorrect-username-login",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Incorrect Username Login",
-        "steps": [
-          {
-            "keyword": "When ",
-            "line": 21,
-            "name": "A user provides incorrect credentials",
-            "result": {
-              "duration": 513000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "username",
-                  "password"
-                ]
-              },
-              {
-                "cells": [
-                  "testName",
-                  "secret_sauce"
-                ]
-              }
-            ]
-          },
-          {
-            "keyword": "And ",
-            "line": 24,
-            "name": "A user clicks on the login button",
-            "result": {
-              "duration": 83000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 25,
-            "name": "The error message \"Epic sadface: Username and password do not match any user in this service\" is displayed",
-            "result": {
-              "duration": 7000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "keyword": "Background",
-        "line": 5,
-        "name": "",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 6,
-            "name": "A user opens a saucelabs website",
-            "result": {
-              "duration": 75000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "background"
-      },
-      {
-        "description": "",
-        "id": "login-page;incorrect-password-login",
-        "keyword": "Scenario",
-        "line": 27,
-        "name": "Incorrect Password Login",
-        "steps": [
-          {
-            "keyword": "When ",
-            "line": 28,
-            "name": "A user provides incorrect credentials",
-            "result": {
-              "duration": 575000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "username",
-                  "password"
-                ]
-              },
-              {
-                "cells": [
-                  "standard_user",
-                  "testPassword"
-                ]
-              }
-            ]
-          },
-          {
-            "keyword": "And ",
-            "line": 31,
-            "name": "A user clicks on the login button",
-            "result": {
-              "duration": 86000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 32,
-            "name": "The error message \"Epic sadface: Username and password do not match any user in this service\" is displayed",
-            "result": {
-              "duration": 6000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "keyword": "Background",
-        "line": 5,
-        "name": "",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 6,
-            "name": "A user opens a saucelabs website",
-            "result": {
-              "duration": 57000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "background"
-      },
-      {
-        "description": "",
-        "id": "login-page;validate-photos;;2",
-        "keyword": "Scenario Outline",
-        "line": 39,
-        "name": "Validate Photos",
-        "steps": [
-          {
-            "keyword": "Then ",
-            "line": 35,
-            "name": "el usuario desea validar la \"photo\" para el \"12\"",
-            "result": {
-              "duration": 768000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "keyword": "Background",
-        "line": 5,
-        "name": "",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 6,
-            "name": "A user opens a saucelabs website",
-            "result": {
-              "duration": 61000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "background"
-      },
-      {
-        "description": "",
-        "id": "login-page;validate-photos;;3",
-        "keyword": "Scenario Outline",
-        "line": 40,
-        "name": "Validate Photos",
-        "steps": [
-          {
-            "keyword": "Then ",
-            "line": 35,
-            "name": "el usuario desea validar la \"photo\" para el \"2\"",
-            "result": {
-              "duration": 232000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
+        ]
       }
     ],
     "id": "login-page",
