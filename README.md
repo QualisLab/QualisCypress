@@ -25,6 +25,10 @@ Also, download and install the JSON fomatter depending on your OS
 
 https://github.com/cucumber/json-formatter
 
+Also, open Windows PowerShell as administrator and set ExecutionPolicy as Unrestricted with the next command:
+
+Set-ExecutionPolicy Unrestricted
+
 ______________________________________________________________________________________
 
 Oracle Instant Client v21.6 winx64 must be installed in path: C:\instantclient_21_6
