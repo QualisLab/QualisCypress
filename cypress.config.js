@@ -43,6 +43,9 @@ module.exports = defineConfig({
   },
   e2e: {
     async setupNodeEvents(on, config) {
+      var firstNameProduct
+      var secondNameProduct
+      var sizeList
       const bundler = createBundler({
         plugins: [createEsbuildPlugin(config)],
       });
@@ -50,6 +53,27 @@ module.exports = defineConfig({
         sqlQuery: (query) => {
           return queryData(query, config.env.db);
         },
+        setFirstNameProduct: (firstName) => {
+          firstNameProduct = firstName
+          return null
+        },
+        getFirstNameProduct: () => {
+          return firstNameProduct
+        },
+        setSecondNameProduct: (secondName) => {
+          secondNameProduct = secondName
+          return null
+        },
+        getSecondNameProduct: () => {
+          return secondNameProduct
+        },
+        setSizeList: (size) => {
+          sizeList = size
+          return null
+        },
+        getSizeList: () => {
+          return sizeList
+        }
       });
       on("file:preprocessor", bundler);
       await addCucumberPreprocessorPlugin(on, config);
