@@ -20,6 +20,7 @@ try {
 try {
     Write-Host '--> Si existe, se eliminaran los archivos dentro de las carpetas reports/cucumber-htmlreport.html/features'
     rm -r reports/cucumber-htmlreport.html/features -ErrorAction stop
+    Write-Host '***Accion Finalizada***' -ForegroundColor DarkGreen
 }catch  {
     Write-Warning "No existe el path reports/cucumber-htmlreport.html/features"
 }

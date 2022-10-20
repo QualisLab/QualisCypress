@@ -4,7 +4,7 @@ Feature: Demo
     #Background:
     #    Given A user opens a saucelabs website
 
-    
+    @prueba4
     Scenario: Success Login
         Given A user opens a saucelabs website
         When A user enters the username "standard_user"

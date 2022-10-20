@@ -1,41 +1,32 @@
 [
   {
-    "description": "    Feature Login page will work depending on the user credentials.",
+    "description": "    Feature with scenarios customized.  ",
     "elements": [
       {
         "description": "",
-        "keyword": "Background",
-        "line": 5,
-        "name": "",
+        "id": "demo;success-login",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Success Login",
         "steps": [
           {
             "keyword": "Given ",
-            "line": 6,
+            "line": 9,
             "name": "A user opens a saucelabs website",
             "result": {
-              "duration": 393000000,
+              "duration": 395000000,
               "status": "passed"
             },
             "match": {
               "location": "not available:0"
             }
-          }
-        ],
-        "type": "background"
-      },
-      {
-        "description": "",
-        "id": "login-page;success-login",
-        "keyword": "Scenario",
-        "line": 9,
-        "name": "Success Login",
-        "steps": [
+          },
           {
             "keyword": "When ",
             "line": 10,
             "name": "A user enters the username \"standard_user\"",
             "result": {
-              "duration": 323000000,
+              "duration": 320000000,
               "status": "passed"
             },
             "match": {
@@ -47,7 +38,7 @@
             "line": 11,
             "name": "A user enters the password \"secret_sauce\"",
             "result": {
-              "duration": 280000000,
+              "duration": 295000000,
               "status": "passed"
             },
             "match": {
@@ -59,7 +50,19 @@
             "line": 12,
             "name": "A user clicks on the login button",
             "result": {
-              "duration": 94000000,
+              "duration": 100000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 13,
+            "name": "A user order by \"Name (Z to A)\"",
+            "result": {
+              "duration": 341000000,
               "status": "passed"
             },
             "match": {
@@ -68,10 +71,10 @@
           },
           {
             "keyword": "Then ",
-            "line": 13,
-            "name": "the url will contains the inventory subdirectory",
+            "line": 14,
+            "name": "the product list was ordenated desc by name",
             "result": {
-              "duration": 9000000,
+              "duration": 79000000,
               "status": "passed"
             },
             "match": {
@@ -82,16 +85,16 @@
         "type": "scenario",
         "tags": [
           {
-            "line": 8,
+            "line": 7,
             "name": "@prueba4"
           }
         ]
       }
     ],
-    "id": "login-page",
+    "id": "demo",
     "keyword": "Feature",
     "line": 1,
-    "name": "Login page",
-    "uri": "cypress\\e2e\\features\\login.feature"
+    "name": "Demo",
+    "uri": "cypress\\e2e\\features\\demo.feature"
   }
 ]
