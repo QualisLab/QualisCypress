@@ -19,5 +19,10 @@
     "esbuild": "latest",
     "multiple-cucumber-html-reporter": "latest",
     "oracledb": "latest"
+  },
+  "@badeball/cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true
+    }
   }
 }

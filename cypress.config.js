@@ -60,11 +60,11 @@ module.exports = defineConfig({
         getFirstNameProduct: () => {
           return firstNameProduct
         },
-        setSecondNameProduct: (secondName) => {
+        setLastNameProduct: (secondName) => {
           secondNameProduct = secondName
           return null
         },
-        getSecondNameProduct: () => {
+        getLastNameProduct: () => {
           return secondNameProduct
         },
         setSizeList: (size) => {

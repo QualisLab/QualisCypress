@@ -11,20 +11,15 @@ class DemoPage {
         this.elements.firstProductName().invoke('text').then((fistNameProduct) => {
             cy.log(fistNameProduct)
             cy.task('setFirstNameProduct', fistNameProduct)
-            cy.task('getFirstNameProduct').then((getFirstNameProduct) => {
-                cy.log(getFirstNameProduct)
-            })
         });
     }
 
     lastProductName() {
+        this.sizeList()
         cy.task('getSizeList').then((size) => {
             this.elements.lastProductName(size).invoke('text').then((secondNameProduct) => {
                 cy.log(secondNameProduct)
-                cy.task('setSecondNameProduct', secondNameProduct)
-                cy.task('getSecondNameProduct').then((getSecondNameProduct) => {
-                    cy.log(getSecondNameProduct)
-                })
+                cy.task('setLastNameProduct', secondNameProduct)
             })
         })
     }
@@ -33,18 +28,40 @@ class DemoPage {
         this.elements.title().should('exist');
     }
 
-    selectOrder() {
-        return this.elements.selectOrder();
+    select_selectOrder(order) {
+        this.elements.selectOrder().select(order);
     }
 
     sizeList() {
         this.elements.sizeListProduct().its('length').then((length) => {
             cy.task('setSizeList', length)
-            cy.task('getSizeList').then((getSizeList) => {
-            cy.log(getSizeList)
+        });
+    }
+
+    validate_firstProductName() {
+        this.elements.firstProductName().invoke('text').then((fistNameProduct) => {
+            cy.log(fistNameProduct)
+            
+            cy.task('getLastNameProduct').then((getLastNameProduct) => {
+                cy.log(getLastNameProduct)
+                expect(fistNameProduct).to.eq(getLastNameProduct)
             })
         });
     }
+
+    validate_lastProductName() {
+
+        cy.task('getSizeList').then((size) => {
+            this.elements.lastProductName(size).invoke('text').then((secondNameProduct) => {
+                cy.log(secondNameProduct)
+                cy.task('getFirstNameProduct').then((getFirstNameProduct) => {
+                    cy.log(getFirstNameProduct)
+                    expect(secondNameProduct).to.eq(getFirstNameProduct)
+                });
+            });
+        });
+    }
+        
 }
 
 module.exports = new DemoPage();
