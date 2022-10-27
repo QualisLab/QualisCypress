@@ -1,9 +1,7 @@
 Feature: Demo
-
     Feature with scenarios customized.  
     #Background:
     #    Given A user opens a saucelabs website
-
     @prueba4
     Scenario: Success Login
         Given A user opens a saucelabs website
