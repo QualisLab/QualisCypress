@@ -1,5 +1,5 @@
 {
-  "name": "qualis-cypress-cucumber",
+  "name": "cypress-cucumber",
   "version": "2.0.0",
   "description": "Qualis test.",
   "main": "index.js",
