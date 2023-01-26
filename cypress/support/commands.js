@@ -23,3 +23,31 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+var firstNameProd
+var secondNameProd
+var sizeList
+
+Cypress.Commands.add('setFirstNameProduct', (firstName) => {
+    firstNameProd = firstName
+})
+
+Cypress.Commands.add('getFirstNameProduct', () => {
+    return firstNameProd
+})
+
+Cypress.Commands.add('setLastNameProduct', (secondName) => {
+    secondNameProd = secondName
+})
+
+Cypress.Commands.add('getLastNameProduct', () => {
+    return secondNameProd
+})
+
+Cypress.Commands.add('setSizeList', (size) => {
+    sizeList = size
+})
+
+Cypress.Commands.add('getSizeList', () => {
+    return sizeList
+})

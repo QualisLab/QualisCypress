@@ -9,17 +9,15 @@ class DemoPage {
 
     firstProductName() {
         this.elements.firstProductName().invoke('text').then((fistNameProduct) => {
-            cy.log(fistNameProduct)
-            cy.task('setFirstNameProduct', fistNameProduct)
+            cy.setFirstNameProduct(fistNameProduct)
         });
     }
 
     lastProductName() {
         this.sizeList()
-        cy.task('getSizeList').then((size) => {
+        cy.getSizeList().then((size) => {
             this.elements.lastProductName(size).invoke('text').then((secondNameProduct) => {
-                cy.log(secondNameProduct)
-                cy.task('setLastNameProduct', secondNameProduct)
+                cy.setLastNameProduct(secondNameProduct)
             })
         })
     }
@@ -34,16 +32,13 @@ class DemoPage {
 
     sizeList() {
         this.elements.sizeListProduct().its('length').then((length) => {
-            cy.task('setSizeList', length)
+            cy.setSizeList(length)
         });
     }
 
     validate_firstProductName() {
-        this.elements.firstProductName().invoke('text').then((fistNameProduct) => {
-            cy.log(fistNameProduct)
-            
-            cy.task('getLastNameProduct').then((getLastNameProduct) => {
-                cy.log(getLastNameProduct)
+        this.elements.firstProductName().invoke('text').then((fistNameProduct) => {            
+            cy.getLastNameProduct().then((getLastNameProduct) => {
                 expect(fistNameProduct).to.eq(getLastNameProduct)
             })
         });
@@ -51,11 +46,9 @@ class DemoPage {
 
     validate_lastProductName() {
 
-        cy.task('getSizeList').then((size) => {
+        cy.getSizeList().then((size) => {
             this.elements.lastProductName(size).invoke('text').then((secondNameProduct) => {
-                cy.log(secondNameProduct)
-                cy.task('getFirstNameProduct').then((getFirstNameProduct) => {
-                    cy.log(getFirstNameProduct)
+                cy.getFirstNameProduct().then((getFirstNameProduct) => {
                     expect(secondNameProduct).to.eq(getFirstNameProduct)
                 });
             });
